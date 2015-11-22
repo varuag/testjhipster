@@ -1,0 +1,42 @@
+<div ng-cloak xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+  <div class="row">
+    <div class="col-md-4">
+      <span class="hipster img-responsive img-rounded"></span>
+    </div>
+    <div class="col-md-8">
+      <p><h1>Hello World</h1></p>
+      <h1>Welcome, {{account.firstName + ' ' + account.lastName}}!</h1>
+
+      <p class="lead">This is your homepage</p>
+
+      <div ng-switch="isAuthenticated()">
+        <div class="alert alert-success" ng-switch-when="true">
+          Welcome {{account.firstName}}.
+        </div>
+
+        <div class="alert alert-warning" ng-switch-when="false">
+          If you to <a class="alert-link" href="#/login">authenticate</a>, you can try the default accounts:<br/>-
+          Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").
+        </div>
+
+        <div class="alert alert-warning" ng-switch-when="false">
+          You don't have an account yet? <a class="alert-link" href="#/register">Register a new account</a>
+        </div>
+      </div>
+
+      <p>
+        If you have any question on JHipster:
+      </p>
+
+      <ul>
+        <li><a href="http://jhipster.github.io/" target="_blank">JHipster homepage</a></li>
+        <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank">JHipster on Stack Overflow</a></li>
+        <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank">JHipster bug
+          tracker</a></li>
+        <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank">JHipster public chat room</a></li>
+        <li><a href="https://twitter.com/java_hipster" target="_blank">contact @java_hipster on Twitter</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>
